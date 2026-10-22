@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Red e Internet (SRI)</title>
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --primary-dark: #0a58ca;
+            --secondary-color: #198754;
+            --warning-color: #ffc107;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #212529;
+            --text-muted: #6c757d;
+            --border-radius: 10px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--box-shadow);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .card h2 {
+            color: #1a252f;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e7f1ff;
+            color: #0c63e4;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .btn-apuntes {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 10px 0 15px 0;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-apuntes:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .section-subtitle {
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-top: 15px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            letter-spacing: 0.5px;
+        }
+
+        .resource-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .resource-item {
+            margin-bottom: 10px;
+        }
+
+        .resource-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .resource-link:hover {
+            background-color: #e9ecef;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            color: var(--primary-dark);
+        }
+
+        .resource-link.task-link {
+            border-left: 4px solid var(--secondary-color);
+            background-color: #f4fbf7;
+        }
+
+        .resource-link.task-link:hover {
+            background-color: #e8f7ee;
+        }
+
+        .resource-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon {
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Encabezado -->
+        <header>
+            <h1>Servicios de Red e Internet (SRI)</h1>
+            <p>Recursos del curso, apuntes de unidades, material complementario de Moodle y tareas</p>
+        </header>
+
+        <!-- Configuración Inicial: Debian -->
+        <section class="card">
+            <h2>🐧 Configuración de Red (Debian)</h2>
+            <p>Documentación de referencia para la configuración inicial de interfaces de red en sistemas Debian:</p>
+            
+            <ul class="resource-list">
+                <li class="resource-item">
+                    <a href="https://docs.google.com/document/d/1uG1pqVOAB3ASZpA9u5hV0pbm35495GqCz0PdHS599b8/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        <span class="resource-info">
+                            <span class="icon">⚙️</span>
+                            <span>Guía de Configuración de Red en Debian</span>
+                        </span>
+                        <span>Abrir Documento &rarr;</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Unidad 1: DHCP -->
+        <section class="card">
+            <h2>🔄 Unidad 1. Protocolo DHCP</h2>
+            <span class="badge">Resultado de Aprendizaje: RA2</span>
+            
+            <p>Acceso a la web de contenidos teóricos del protocolo DHCP:</p>
+            <div>
+                <a href="https://macalle77.github.io/SRI/unidad1_dhcp/" target="_blank" rel="noopener noreferrer" class="btn-apuntes">
+                    🌐 Ver Apuntes de la Unidad (GitHub Pages) &rarr;
+                </a>
+            </div>
+
+            <p class="section-subtitle">Material complementario de Moodle</p>
+            <ul class="resource-list">
+                <li class="resource-item">
+                    <a href="https://docs.google.com/document/d/1xiR26C5mWF4NzuRWSAgYzIUena62P4D2yIVnrTOzINk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        <span class="resource-info">
+                            <span class="icon">📊</span>
+                            <span>Información del Protocolo DHCP, Tablas y Diagramas de Estados</span>
+                        </span>
+                        <span>Abrir Documento &rarr;</span>
+                    </a>
+                </li>
+                <li class="resource-item">
+                    <a href="https://docs.google.com/document/d/15UlfgLdJn9w_ej9rPs_tQt2MixjGHx2Q/edit?usp=drive_link&ouid=104726256258432773748&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        <span class="resource-info">
+                            <span class="icon">🛠️</span>
+                            <span>Guía de Configuración de Kea Server</span>
+                        </span>
+                        <span>Abrir Documento &rarr;</span>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="section-subtitle">Entrega de actividades</p>
+            <ul class="resource-list">
+                <li class="resource-item">
+                    <a href="https://docs.google.com/document/d/16ktBx_BxTt2qolt2XIK6FwFFfwvXIA93Y8FEHAjxzAM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="resource-link task-link">
+                        <span class="resource-info">
+                            <span class="icon">📝</span>
+                            <span><strong>Enunciado de Tarea: Unidad 1 (DHCP)</strong></span>
+                        </span>
+                        <span>Ver Tarea &rarr;</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Unidad 2: DNS -->
+        <section class="card">
+            <h2>🌐 Unidad 2. Protocolo DNS</h2>
+            <span class="badge">Resultado de Aprendizaje: RA2</span>
+            
+            <p>Acceso a la web de contenidos teóricos del servicio de resolución de nombres (DNS):</p>
+            <div>
+                <a href="https://macalle77.github.io/SRI/unidad2_dns/" target="_blank" rel="noopener noreferrer" class="btn-apuntes">
+                    🌐 Ver Apuntes de la Unidad (GitHub Pages) &rarr;
+                </a>
+            </div>
+
+            <p class="section-subtitle">Material complementario de Moodle</p>
+            <ul class="resource-list">
+                <li class="resource-item">
+                    <a href="https://docs.google.com/document/d/1xPeu_-3oaKwM5Hj7iilMuPm5Z1UorG24/edit?usp=drive_link&ouid=104726256258432773748&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        <span class="resource-info">
+                            <span class="icon">🛠️</span>
+                            <span>Guía de Configuración del Servidor BIND</span>
+                        </span>
+                        <span>Abrir Documento &rarr;</span>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="section-subtitle">Entrega de actividades</p>
+            <ul class="resource-list">
+                <li class="resource-item">
+                    <a href="https://docs.google.com/document/d/1lCQkA54PVnN9vH692gMlFM4a6_y47eoGaM2QZD-Oe-w/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="resource-link task-link">
+                        <span class="resource-info">
+                            <span class="icon">📝</span>
+                            <span><strong>Enunciado de Tarea: Unidad 2 (DNS)</strong></span>
+                        </span>
+                        <span>Ver Tarea &rarr;</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>Modulo de Servicios de Red e Internet (SRI)</p>
+        </footer>
+    </div>
+
+</body>
+</html>
